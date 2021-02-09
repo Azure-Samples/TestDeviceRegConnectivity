@@ -1,57 +1,43 @@
-# Project Name
+---
+page_type: sample
+languages:
+- powershell
+products:
+- azure-active-directory
+description: "Test-DeviceRegConnectivity PowerShell script helps to test the Internet connectivity to the following Microsoft resources under the system context to validate the connection status between the device that needs to be connected to Azure AD as hybrid Azure AD joined device and Microsoft resources that are used during device registration process. It also, checks for SSL/TLS handshake and report as failure if any"
+urlFragment: "TestDeviceRegConnectivity"
+---
+# Test Device Registration Connectivity
+Test-DeviceRegConnectivity PowerShell script helps to test the Internet connectivity to the following Microsoft resources under the system context to validate the connection status between the device that needs to be connected to Azure AD as hybrid Azure AD joined device and Microsoft resources that are used during device registration process. It also, checks for SSL/TLS handshake and report as failure if any.
 
-(short, 1-3 sentenced, description of the project)
+  - https://login.microsoftonline.com
+  - https://device.login.microsoftonline.com
+  - https://enterpriseregistration.windows.net
+ 
+## Why is this script helpful
 
-## Features
+  - You don’t need to rely on PS Exec tool to test the Internet connectivity under the system context, you need just to run it as administrator.
+  - You don’t need to collect network trace during device registration and analyze it to verify the Internet connectivity.
+  - You don’t need to check the Internet gateway (web proxy or firewall) to verify the Internet connectivity.
 
-This project framework provides the following features:
+> [!NOTE]
+> Using this script, Internet connectivity troubleshooting time will be reduced, and you need just to run it as administrator.
 
-* Feature 1
-* Feature 2
-* ...
+## How to run the script
 
-## Getting Started
+Download and run the `Test-DeviceRegConnectivity.ps1` script from this GitHub repo. 
 
-### Prerequisites
+## User experience
 
-(ideally very short, if any)
+- When the test passes successfully
 
-- OS
-- Library version
-- ...
+![TestPass](media/pass.png)
 
-### Installation
+- When the test fails
 
-(ideally very short)
+![TestFail1](media/f1.png)
 
-- npm install [package name]
-- mvn install
-- ...
+![TestFail2](media/f3.png)
 
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+> [!NOTE]
+> You can use [DSRegTool](https://github.com/mzmaili/DSRegTool) which is a comprehensive tool that performs more than 50 different tests that help you to identify and fix the most common device registration issues for all join types.
