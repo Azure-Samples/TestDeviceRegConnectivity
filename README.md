@@ -39,5 +39,4 @@ Download and run the `Test-DeviceRegConnectivity.ps1` script from this GitHub re
 
  ![TestFail2](media/f3.png)
 
-> [!NOTE]
-> You can use [DSRegTool](https://github.com/mzmaili/DSRegTool) which is a comprehensive tool that performs more than 50 different tests that help you to identify and fix the most common device registration issues for all join types.
+
